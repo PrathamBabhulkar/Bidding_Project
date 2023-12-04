@@ -10,9 +10,9 @@ app = Flask(__name__, static_folder='static')
 app.secret_key = 'Pobb'
 
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_HOST'] = '82.180.140.1'
+app.config['MYSQL_USER'] = 'u146569662_admin1'
+app.config['MYSQL_PASSWORD'] = 'Laksh_2024'
 app.config['MYSQL_DB'] = 'mydb'
 mysql = MySQL(app)
 
@@ -482,7 +482,7 @@ def userbuy(proid):
         username = request.form['txtprouser']
         address = request.form['txtaddress']
         payment = request.form['txtpayment']
-        owner_name =request.form['txtowner']
+        owner_name = request.form['txtowner']
 
 
         try:
@@ -495,8 +495,7 @@ def userbuy(proid):
 
             mysql.connection.commit()
             cur.close()
-            flash("Product Buy Request send successfully")
-            # return "Product Buy Request send  successfully"
+            # flash("Product Buy Request send successfully")
         except Exception as e:
             return f"Error: {str(e)}"
 
@@ -1180,13 +1179,12 @@ def Admincate():
 
 
 
-# @app.route('/Admin_Dashboard')
-# def Admindashboard():
-#     return render_template('admindashboardindex.html')
 
-# @app.route('/Admin_Dashboard')
-# def Admindashboard():
-#     return render_template('admindashboardindex.html')
+
+
+# if __name__ == '__main__':
+#     app.run(debug=True)  # Enable debug mode for development
+
 
 if __name__ == '__main__':
-    app.run(debug=True)  # Enable debug mode for development
+    app.run(debug=False, host="0.0.0.0")  # Enable debug mode for development

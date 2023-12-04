@@ -34,6 +34,13 @@
     box-sizing: border-box;
 }
 
+/* Media query for screens with a width between 400px and 450px */
+@media screen and (min-width: 400px) and (max-width: 450px) {
+    .col-lg-4,
+    .col-sm-4 {
+        margin-left: 100px;
+    }
+
 .box_main {
     /* Your existing box styling */
 }
@@ -129,7 +136,7 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Laptop</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">-- Rs</span></p>
                                  <div class="electronic_img"><img src="/static/images/laptop-img.png"></div>
                                  <div class="btn_main">
                                     <center>
@@ -140,7 +147,7 @@
                            </div>
 <!--                           -->
                            {% for n in productlist %}
-                            <div class="col-lg-4 col-sm-4">
+                            <div class="col-lg-4 col-sm-4" >
                                 <div class="box_main">
                                     <h4 class="shirt_text">{{ n.proname }}</h4>
                                     <p class="price_text">Start Price <span style="color: #262626;">{{ n.proprice }} Rs</span></p>
