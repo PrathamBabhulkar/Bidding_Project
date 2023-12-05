@@ -14,7 +14,7 @@ app.secret_key = 'Pobb'
 app.config['MYSQL_HOST'] = '82.180.140.1'
 app.config['MYSQL_USER'] = 'u146569662_admin1'
 app.config['MYSQL_PASSWORD'] = 'Laksh_2024'
-app.config['MYSQL_DB'] = 'mydb'
+app.config['MYSQL_DB'] = 'u146569662_auction1'
 mysql = MySQL(app)
 
 
