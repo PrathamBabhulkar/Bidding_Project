@@ -10,7 +10,6 @@ app = Flask(__name__, static_folder='static')
 
 app.secret_key = 'Pobb'
 
-
 app.config['MYSQL_HOST'] = '82.180.140.1'
 app.config['MYSQL_USER'] = 'u146569662_admin1'
 app.config['MYSQL_PASSWORD'] = 'Laksh_2024'
