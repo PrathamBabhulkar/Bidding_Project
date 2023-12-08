@@ -57,9 +57,10 @@
                 <th>Product Name
                 <th>Product Price</th>
                 <th>Customer Name</th>
+                  <th>Buyer Profile</th>
                 <th>Customer Address</th>
                 <th>Payment Method</th>
-                <th>Your Name</th>
+                <th></th>
               </tr>
 
                 {% for n in productlist %}
@@ -69,6 +70,7 @@
                 <td>{{n.bname}}</td>
                 <td>{{n.bprice}}</td>
                 <td>{{n.buname}}</td>
+                <td><a class="btn btn-primary" href="{{ url_for('customerprofileview', uname=n.buname) }}">{{n.buname}} Profile</a></td>
                   <td>{{n.baddress}}</td>
                   <td>{{n.bmethod}}</td>
                   <td>{{n.owner}}</td>
