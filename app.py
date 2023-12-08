@@ -1177,6 +1177,16 @@ def Admincate():
 
     return render_template('adm_categories.html', c_list=clist)
 
+@app.route('/customer_profile_view/<uname>')
+def customerprofileview(uname):
+
+    cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cur.execute("SELECT * FROM signup WHERE uname=%s", (uname,))
+    customer = cur.fetchall()
+    cur.close()
+
+    return render_template('user_view_cust_profile.html', customer=customer,)
+
 
 
 
